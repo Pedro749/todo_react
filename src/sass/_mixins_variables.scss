@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Unbounded:wght@400;900&display=swap');
+
+$cinza-escuro: #3d5a80;
+$cinza-medio: #98c1d9;
+$cinza-claro: #e0fbfc;
+$laranja: #ee6c4d;
+$preto: #293241;
+
+$font-1:  'Unbounded', cursive;
+$font-2: 'Roboto', sans-serif;
+
+$lg-device: 1200px;
+$md-device: 760px;
+$sm-device: 480px; 
+
+@function em($pixel, $context: 16) {
+  @return calc($pixel / $context) + em;
+}
+
+@mixin tipo-1($size) {
+  font-family: $font-1;
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+
+  @if $size == 30 {
+    font-size: em(30);
+    line-height: em(40, 30);
+  }
+
+  @if $size == 40 {
+    font-size: em(40);
+    line-height: em(50, 40);
+  }
+}
+
+@mixin tipo-2($size) {
+  font-family: $font-2;
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  }  
+
+  @else if $size == 24 {
+    font-size: em(24);
+    line-height: em(30, 24);
+  }
+
+}
+
+@mixin device($size) {
+  @if $size == large {
+      @media screen and (min-width: $lg-device) {
+          @content;
+      }
+  }
+  @else if $size == medium {
+      @media screen and (min-width: $md-device) and (max-width: #{$lg-device - 1}) {
+          @content;
+      }
+  }
+  @else if $size == small {
+      @media screen and (max-width: #{$md-device - 1}) {
+          @content;
+      }
+  }
+}
