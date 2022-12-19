@@ -1,0 +1,62 @@
+@import '../../sass/mixins_variables';
+
+.tasks__div {
+  color: $branco;
+  transition: all .2s;
+
+ & ul li {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+   
+
+    &:hover {
+      background-color: $cinza-medio;
+
+      & .tasks__delete {
+        fill: $preto;
+      }
+
+      & .tasks__edit {
+        fill: $preto;
+      }
+    }
+  }
+}
+
+li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks__div:hover tasks__delete {
+  background-color: red;
+}
+.tasks__text {
+  margin-left: 5px;
+  @include tipo-2(18);
+  font-weight: bold;
+}
+
+.tasks__edit {
+  fill: $cinza-medio;
+  transition: all .2s;
+  margin-right: 5px;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tasks__delete {
+  fill: $laranja;
+  transition: all .2s;
+  margin-right: 5px;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+

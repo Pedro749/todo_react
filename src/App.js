@@ -1,12 +1,9 @@
 import React from 'react';
+import Main from './components/Main';
 import './App.scss';
 
 function App() {
-  return (
-    <div>
-      <h1>Olá mundo!</h1>
-    </div>
-  );
+  return <Main />;
 }
 
 export default App;

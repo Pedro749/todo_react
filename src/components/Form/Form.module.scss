@@ -1,0 +1,39 @@
+@import '../../sass/mixins_variables';
+
+.form__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__input {
+  @include tipo-2(18);
+  width: 94%;
+  border: none;
+  height: 1.7em;
+  border-radius: 5px;
+  background-color: $branco;
+  padding: 5px;
+
+  &:focus {
+    outline: 2px solid $cinza-medio;
+  }
+}
+
+.form__button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+.form__icon {
+  width: 2.5em;
+  height: 2.5em;
+  fill: $cinza-claro;
+  transition: all .1s;
+
+  &:hover {
+    fill: $cinza-medio;
+  }
+}

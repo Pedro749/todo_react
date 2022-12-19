@@ -1,0 +1,15 @@
+@import '../sass/mixins_variables';
+
+.main__div {
+  margin: 5em auto;
+  width: 35em;
+  background-color: $preto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.main__title {
+  color: $branco;
+  @include tipo-1(48);
+  margin-bottom: 10px;
+}
