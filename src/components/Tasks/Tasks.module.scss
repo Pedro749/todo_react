@@ -34,6 +34,7 @@ li div {
 .tasks__div:hover tasks__delete {
   background-color: red;
 }
+
 .tasks__text {
   margin-left: 5px;
   @include tipo-2(18);

@@ -14,6 +14,7 @@
   border-radius: 5px;
   background-color: $branco;
   padding: 5px;
+  margin-bottom: 10px;
 
   &:focus {
     outline: 2px solid $cinza-medio;
@@ -28,6 +29,7 @@
 }
 
 .form__icon {
+  margin-top: -7px;
   width: 2.5em;
   height: 2.5em;
   fill: $cinza-claro;

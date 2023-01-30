@@ -15,7 +15,9 @@ export default function Main() {
 
   function getTask() {
     const tasksStorage = window.localStorage.getItem('tasks');
-    if (tasksStorage != 'undefined') setTasks(JSON.parse(tasksStorage));
+
+    if (tasksStorage != 'undefined' && tasksStorage)
+      setTasks(JSON.parse(tasksStorage));
   }
 
   useEffect(() => {
